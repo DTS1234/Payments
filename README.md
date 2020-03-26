@@ -52,3 +52,8 @@ Payments by Cash
 Finally, payments made by cash are always valid (their process method only have to print a
 message indicating that the payment has been made and return true). 
 
+Class diagram for my solution : 
+
+![GitHub Logo](/UML_class_diagram.JPG)
+
+
