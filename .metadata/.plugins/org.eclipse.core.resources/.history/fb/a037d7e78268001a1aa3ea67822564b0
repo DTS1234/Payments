@@ -1,0 +1,63 @@
+package uo.mp.ex.payment;
+
+import ruralvia.PaymentGateway;
+import ruralvia.Transaction;
+
+public class CreditCardPayment extends Payment implements Transaction {
+
+	private static final String MERCHANT_ID = "1111-22";
+	private String cardNumber;
+	private int cardEndMonth;
+	private int cardEndYear;
+	
+	public CreditCardPayment(String transactionId, double amount, String cardNumber, 
+			int cardEndMonth, int cardEndYear) {
+		
+		super(transactionId, amount);		
+		this.cardNumber = cardNumber;
+		this.cardEndMonth = cardEndMonth;
+		this.cardEndYear= cardEndYear;
+		
+	}
+		
+	public String getCardNumber() {
+		return cardNumber;
+	}
+
+
+
+	@Override
+	public void process() {
+		
+		PaymentGateway paymentGateaway = new PaymentGateway();
+		if(!paymentGateaway.isValid(this))
+		
+	}
+
+	@Override
+	public boolean isValid() {
+
+		return false;
+	}
+
+	@Override
+	public String getMerchantId() {
+		return MERCHANT_ID;
+	}
+
+	@Override
+	public String getCreditCardNumber() {
+		return null;
+	}
+
+	@Override
+	public int getMonth() {
+		return cardEndMonth;
+	}
+
+	@Override
+	public int getYear() {
+		return cardEndYear;
+	}
+
+}

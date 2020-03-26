@@ -1,0 +1,66 @@
+package uo.mp.ex.retailer;
+
+import paypal.PayPalAPI;
+
+public class PayPalPayment extends Payment {
+	
+	private String username;
+	private String password;
+	
+	public PayPalPayment(String transactionId, double amount, String username, String password) {
+		super(transactionId, amount);
+		this.password = password;
+		this.username = username;
+	}
+
+	@Override
+	public void process() {
+		
+		PayPalAPI payPalApi = new PayPalAPI();
+		String token = payPalApi.logIn(username, password);
+		
+		if(payPalApi.checkout(token, getTransactionId(), getAmount())) {
+			setValid(true);
+			messageSucessPayment();
+		}else
+			messageFailedPayment();
+
+	}
+
+	@Override
+	public boolean isValid() {
+		return getValid();
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	@Override
+	public String toString() {
+		return "PayPalPayment [username=" + username + ", password=" + password + ", Transaction Id ="
+				+ getTransactionId() + ", amount =" + getAmount() + "]";
+	}
+	
+	private void messageSucessPayment() {
+		System.out.println("PAYMENT DONE : " + this);
+	}
+	
+	private void messageFailedPayment() {
+		System.out.println("FAILED PAYMENT : " + this);
+		System.out.println("ERROR CAUSED BY INVALID LOGIN");
+	}
+	
+}

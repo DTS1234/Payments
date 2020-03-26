@@ -1,0 +1,5 @@
+package uo.mp.ex.payment;
+
+public class Payment {
+
+}

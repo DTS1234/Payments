@@ -1,0 +1,46 @@
+package uo.mp.ex.retailer;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Retailer {
+
+	private List<Payment> retailerPayments;
+	
+	public Retailer() {
+		
+		retailerPayments = new ArrayList<Payment>();
+		
+	}
+	
+	public void addPayment(Payment payment) {
+		
+		if(!retailerPayments.contains(payment))
+			retailerPayments.add(payment);
+		else
+			sendPaymentDuplicationMsg();
+	}
+	
+	public void processAllPayments() {
+		for(Payment payment : retailerPayments) {
+			payment.process();
+		}
+	}
+	
+	public double getTotalSales() {
+		double totalSales = 0;
+		
+		for(Payment payment : retailerPayments) {
+			if(payment.isValid()) {
+				totalSales += payment.getAmount();
+			}
+		}
+		
+		return totalSales;
+		
+	}
+	
+	private void sendPaymentDuplicationMsg() {
+		System.out.println("You cannot make same transaction two times.");
+	}
+}

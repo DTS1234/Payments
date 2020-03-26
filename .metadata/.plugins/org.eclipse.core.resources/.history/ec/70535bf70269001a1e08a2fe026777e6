@@ -1,0 +1,30 @@
+package uo.mp.ex.retailer;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import uo.mp.ex.payment.Payment;
+
+public class Retailer {
+
+	private List<Payment> retailerPayments;
+	
+	public Retailer() {
+		
+		retailerPayments = new ArrayList<Payment>();
+		
+	}
+	
+	public void addPayment(Payment payment) {
+		retailerPayments.add(payment);
+	}
+	
+	public void processAllPayments() {
+		
+	}
+	
+	public double getTotalSales() {
+		
+	}
+	
+}

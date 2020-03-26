@@ -1,0 +1,43 @@
+package uo.mp.ex.payment;
+
+public abstract class Payment {
+	
+	private String transactionId;
+	private double amount;
+	private boolean isValid;
+	
+	public Payment(String transactionId, double amount, boolean isValid) {
+		this.transactionId = transactionId;
+		this.amount = amount;
+		this.isValid = isValid;
+	}
+
+	public String getTransactionId() {
+		return transactionId;
+	}
+
+	public void setTransactionId(String transactionId) {
+		this.transactionId = transactionId;
+	}
+
+	public double getAmount() {
+		return amount;
+	}
+
+	public void setAmount(double amount) {
+		this.amount = amount;
+	}
+
+	public boolean isValid() {
+		return isValid;
+	}
+
+	public void setValid(boolean isValid) {
+		this.isValid = isValid;
+	}
+	
+	public abstract void process();
+	
+	public abstarct boolean isValid(;)
+	
+}

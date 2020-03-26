@@ -1,0 +1,11 @@
+package uo.mp.ex.payment;
+
+public class CashPayment extends Payment {
+
+	public CashPayment(String transactionId, double amount) {
+		super(transactionId, amount);
+	}
+
+	
+
+}

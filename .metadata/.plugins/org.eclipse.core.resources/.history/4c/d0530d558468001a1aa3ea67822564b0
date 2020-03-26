@@ -1,0 +1,26 @@
+package uo.mp.ex.payment;
+
+public class PayPalPayment extends Payment {
+	
+	private String username;
+	private String password;
+	
+	public PayPalPayment(String transactionId, double amount, String username, String password) {
+		super(transactionId, amount);
+		this.password = password;
+		this.username = username;
+	}
+
+	@Override
+	public void process() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public boolean isValid() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

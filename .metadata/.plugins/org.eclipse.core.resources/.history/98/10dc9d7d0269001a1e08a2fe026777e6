@@ -1,0 +1,9 @@
+package uo.mp.ex.retailer;
+
+public class Retailer {
+
+	public Retailer() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

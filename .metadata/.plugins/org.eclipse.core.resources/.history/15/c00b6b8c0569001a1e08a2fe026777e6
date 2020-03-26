@@ -1,0 +1,39 @@
+package retailertests;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import uo.mp.ex.retailer.CashPayment;
+import uo.mp.ex.retailer.CreditCardPayment;
+import uo.mp.ex.retailer.PayPalPayment;
+import uo.mp.ex.retailer.Payment;
+import uo.mp.ex.retailer.Retailer;
+
+public class GetTotalSalesTest {
+	
+	private Retailer retailerTest;
+	private Payment p1;
+	private Payment p2;
+	private Payment p3;
+	private Payment p4;
+	
+	
+	@Before
+	public void setUp() {
+		
+		retailerTest = new Retailer();
+		
+		p1 = new CreditCardPayment("100", 20.05, "1111-1111-1111-1111-1111", 12, 2018, "1111-22");
+		p2 = new CreditCardPayment("100", 20.05, "1111-1111-1111-1111-1111", 12, 2018, "1111-22");
+		p3 = new CashPayment("101", 220);
+		p4 = new PayPalPayment("102", 20.05, "mary@w3c.org", "dD_66%j")
+	}
+	
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

@@ -1,0 +1,10 @@
+package uo.mp.ex.retailer;
+
+public class Retailer {
+
+	public Retailer() {
+	}
+	
+	
+	
+}

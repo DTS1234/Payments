@@ -1,0 +1,16 @@
+package uo.mp.ex.retailer;
+
+public class Retailer {
+
+	public Retailer() {
+	}
+	
+	public void addPayment() {
+		
+	}
+	
+	public void processAllPayments() {
+		
+	}
+	
+}

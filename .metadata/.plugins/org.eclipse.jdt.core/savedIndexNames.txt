@@ -1,0 +1,24 @@
+INDEX VERSION 1.131+C:\Users\Adam\Desktop\STUDIA\Oviedo\TG1-Workspace\.metadata\.plugins\org.eclipse.jdt.core
+3831459126.index
+1458250182.index
+1150016225.index
+2608704664.index
+2805113139.index
+2483075506.index
+1002690490.index
+3037233461.index
+1020860043.index
+515599343.index
+3814273803.index
+2835227467.index
+1698188748.index
+2381063623.index
+1878319331.index
+695524433.index
+4145360575.index
+3879049197.index
+2943505400.index
+1444702701.index
+3133304614.index
+671196306.index
+3445570584.index

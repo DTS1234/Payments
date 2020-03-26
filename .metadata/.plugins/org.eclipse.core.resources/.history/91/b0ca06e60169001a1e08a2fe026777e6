@@ -1,0 +1,9 @@
+package uo.mp.ex.payment;
+
+public class CashPayment {
+
+	public CashPayment() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
